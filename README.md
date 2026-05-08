@@ -20,9 +20,17 @@ Project ini dibangun menggunakan teknologi terkini:
 
 ---
 
-## 🚀 Memulai Project
+🚀 Memulai Project
+1. Kloning Repositori
 
-### 1. Kloning Repositori
-```bash
+Bash
 git clone [https://github.com/username-kamu/ayocuci-fe.git](https://github.com/username-kamu/ayocuci-fe.git)
 cd ayocuci-fe
+2. Instal Dependensi
+
+Bash
+npm install
+3. Jalankan Server Development
+
+Bash
+npm run dev
