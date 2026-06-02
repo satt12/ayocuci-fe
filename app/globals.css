@@ -3,7 +3,9 @@
 @theme {
   /* --- CUSTOM COLORS --- */
   --color-primary: #E76F51;
-  --color-secondary: #FDF0EB;
+  
+  /* 💡 FIX DI SINI: Ubah dari #FDF0EB menjadi #f8f9fa agar warna dasar seluruh page serasi */
+  --color-secondary: #f8f9fa; 
 
   --color-pastel-orange: #FDE7E1;
   --color-pastel-cream: #F2EDE7;
@@ -29,7 +31,7 @@ html {
 
 /* --- BASE STYLES --- */
 body {
-  /* Default font disetel ke Jakarta Sans */
+  /* Otomatis memanggil bg-secondary yang nilainya sudah jadi #f8f9fa */
   @apply font-sans bg-secondary dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors duration-500 ease-in-out antialiased;
 }
 
