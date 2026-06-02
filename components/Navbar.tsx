@@ -51,7 +51,6 @@ export default function Navbar() {
     setIsOpen(false);
   }, [pathname]);
 
-  // Alamat href sudah lurus mengarah ke folder independen masing-masing
   const fiturItems = [
     { icon: <Shirt className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Layanan", href: "/layanan", desc: "Kelola jasa laundry & paket" },
     { icon: <UserCheck className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Karyawan", href: "/karyawan", desc: "Delegasi dan list Staf" },
@@ -59,7 +58,7 @@ export default function Navbar() {
     { icon: <LayoutDashboard className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Ringkasan", href: "/", desc: "Statistik cepat harian" },
     { icon: <Wallet className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Dompet", href: "/dompet", desc: "Saldo & mutasi kas" },
     { icon: <Users className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Pelanggan", href: "/pelanggan", desc: "Manajemen database pelanggan" },
-    { icon: <Coins className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Pengeluaran", href: "/pengeluaran", desc: "Catat biaya operasional" }, // 💡 FIX: Sudah ditambahkan href-nya!
+    { icon: <Coins className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Pengeluaran", href: "/pengeluaran", desc: "Catat biaya operasional" }, 
     { icon: <BarChart3 className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Laporan", href: "/laporan", desc: "Analisis bisnis mendalam" },
     { icon: <Clock className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Status", href: "/status", desc: "Pantau proses pengerjaan" },
     { icon: <Printer className="w-5 h-5 text-zinc-400 group-hover/item:text-white transition-all" />, title: "Printer", href: "/printer", desc: "Koneksi thermal Bluetooth" },
@@ -76,17 +75,22 @@ export default function Navbar() {
       >
         <div className="w-full h-full flex items-center justify-between">
           
-          {/* 1. SISI KIRI: LOGO TEKS MINIMALIS AYOCUCI */}
-          <Link href="/" className="flex items-center gap-1 group cursor-pointer">
-            <span className="font-title font-black text-xl tracking-tight text-zinc-950 group-hover:opacity-85 transition-all">
-              ayo<span className="text-[#e76f51]">cuci</span>
-            </span>
+          {/* 1. SISI KIRI: SEKARANG MEMANGGIL PATH JALUR FOLDER YANG BENAR */}
+          <Link href="/" className="flex items-center cursor-pointer hover:opacity-90 transition-all">
+            <img 
+              src="/gallery/Logo_3.webp" 
+              style={{ 
+                height: isScrolled ? '28px' : '36px', 
+                width: 'auto',
+                display: 'block',
+                objectFit: 'contain'
+              }} 
+              className="transition-all duration-300"
+            />
           </Link>
 
-          {/* 2. SISI TENGAH: MENU NAVIGATION DENGAN INTEGRASI HOVER UNIFORM */}
+          {/* 2. SISI TENGAH: MENU NAVIGATION */}
           <div className="hidden md:flex items-center gap-10">
-            
-            {/* CONTAINER MEGAMENU FITUR BERBASIS KLIK */}
             <div className="relative py-4" ref={dropdownRef}>
               <button 
                 onClick={() => setIsOpen(!isOpen)} 
@@ -98,7 +102,6 @@ export default function Navbar() {
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isOpen ? "rotate-180 text-[#e76f51]" : "text-zinc-400"}`} />
               </button>
 
-              {/* MEGAMENU DROPDOWN BOX */}
               <div 
                 className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[640px] bg-white rounded-3xl p-8 shadow-2xl border border-zinc-100/80 transition-all duration-300 z-50 transform origin-top ${
                   isOpen 
@@ -106,7 +109,6 @@ export default function Navbar() {
                     : "opacity-0 pointer-events-none scale-95"
                 }`}
               >
-                {/* Header Sub-menu Dropdown */}
                 <div className="flex items-center justify-between mb-6 border-b border-zinc-100/50 pb-3">
                   <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">Fitur</span>
                   <Link href="/fitur" className="text-xs font-bold text-[#e76f51] hover:opacity-80 flex items-center gap-0.5 transition-all">
@@ -114,12 +116,11 @@ export default function Navbar() {
                   </Link>
                 </div>
 
-                {/* Grid Konten Opsi Layanan Kasir */}
                 <div className="grid grid-cols-2 gap-x-6 gap-y-3">
                   {fiturItems.map((item, index) => (
                     <Link 
                       key={index} 
-                      href={item.href} // 💡 FIX: Mengarah langsung ke folder (/layanan, /pelanggan, dll)
+                      href={item.href} 
                       className="flex items-start gap-4 p-3 rounded-2xl border-2 border-transparent hover:border-[#e76f51] hover:bg-[#e76f51]/5 hover:shadow-lg hover:shadow-[#e76f51]/5 transition-all duration-200 group/item"
                     >
                       <div className="w-10 h-10 rounded-xl bg-zinc-50 flex items-center justify-center border border-black/5 shrink-0 group-hover/item:bg-[#e76f51] group-hover/item:border-transparent transition-all duration-200">
@@ -139,7 +140,6 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* LINK NAVIGASI UTAMA LAINNYA - SEKARANG KOMPAK HOVER ORANGE */}
             <Link 
               href="#harga" 
               className={`text-sm font-medium transition-all duration-200 ${
@@ -166,7 +166,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* 3. SISI KANAN: CTA BUTTON FULLY ROUNDED */}
+          {/* 3. SISI KANAN: CTA BUTTON */}
           <div className="flex items-center">
             <Link
               href="/fitur"
