@@ -7,41 +7,46 @@ export default function LandingPage() {
     <main className="min-h-screen text-zinc-900 overflow-x-hidden selection:bg-[#e76f51]/30 font-sans">
       
       {/* =========================================================================
-          1. HERO SECTION (TRIPLE MOCKUP HP)
+          1. HERO SECTION (BACKGROUND DIKUNCI LEBARNYA & PAS KE TENGAH ACCORDING TO DESIGN)
           ========================================================================= */}
-      <section className="relative pt-44 pb-20 max-w-7xl mx-auto px-6 md:px-8 text-center flex flex-col items-center gap-6">
-        <span className="text-[#e76f51] font-bold text-xs bg-[#e76f51]/10 px-4 py-2 rounded-full tracking-widest uppercase">
-          Aplikasi Kasir Laundry #1 di Indonesia
-        </span>
-        <h1 className="font-title text-4xl md:text-6xl font-black tracking-tight max-w-4xl leading-tight text-zinc-950">
-          Aplikasi Kasir Laundry <br />
-          Modern & Praktis
-        </h1>
-        <p className="text-zinc-500 text-sm md:text-base max-w-xl leading-relaxed font-medium">
-          Kelola transaksi, pantau workshop, cetak nota otomatis, hingga otomatisasi pesan WhatsApp pelanggan dalam satu aplikasi SaaS terintegrasi.
-        </p>
-
-        {/* Action Buttons */}
-        <div className="flex flex-wrap gap-4 mt-2 justify-center">
-          <Link href="/layanan" className="bg-[#e76f51] text-white font-bold text-xs md:text-sm px-8 py-3.5 rounded-full shadow-lg shadow-[#e76f51]/20 hover:opacity-95 transition-all">
-            Coba Gratis Sekarang
-          </Link>
-          <button className="bg-white border border-zinc-200 text-zinc-700 font-bold text-xs md:text-sm px-8 py-3.5 rounded-full hover:bg-zinc-50 transition-all cursor-pointer">
-            Lihat Demo
-          </button>
+      <section className="relative w-full flex flex-col items-center pt-32 md:pt-40 overflow-hidden">
+        
+        {/* Container Pembatas Latar Belakang - Mengunci Gambar Agar Tidak Terlalu Lebar */}
+        <div className="absolute inset-1 w-full h-full max-w-8xl mx-auto px-6 md:px-8 -z-10">
+          <img 
+            src="/gallery/Frame 2974.webp" 
+            alt="Background Hero AyoCuci" 
+            className="w-full h-full object-contain object-top rounded-[0rem]"
+          />
         </div>
 
-        {/* Triple HP Mockup Container */}
-        <div className="mt-12 w-full max-w-4xl bg-gradient-to-t from-[#e76f51]/15 via-[#e76f51]/5 to-transparent rounded-[3rem] p-8 md:p-12 border border-[#e76f51]/5 flex justify-center items-end gap-4 overflow-hidden min-h-[340px] md:min-h-[460px]">
-          <div className="w-1/4 aspect-[9/18] bg-white rounded-t-[2rem] border-t border-x border-zinc-200 shadow-xl opacity-70 translate-y-12 hidden md:block" />
-          <div className="w-56 md:w-64 aspect-[9/19] bg-[#e76f51] rounded-t-[2.5rem] border-t-2 border-x-2 border-white/20 shadow-2xl p-4 flex flex-col justify-start relative text-white">
-            <div className="w-16 h-4 bg-black mx-auto rounded-full mb-6" />
-            <span className="text-[10px] opacity-70 uppercase font-bold tracking-wider">Total Omzet</span>
-            <h4 className="text-lg font-black tracking-tight">Rp 12.450.000</h4>
-            <div className="w-full h-24 bg-white/10 rounded-xl mt-4 border border-white/5" />
+        {/* Konten Teks & Tombol (Duduk Manis Pas di Atas Gradasi Gambar Sesuai Tangkapan Layar) */}
+        <div className="max-w-7xl mx-auto px-6 md:px-8 text-center flex flex-col items-center gap-4 md:gap-6 z-10">
+          <span className="text-[#e76f51] text-[10px] md:text-xs font-bold bg-white/90 backdrop-blur-xs px-4 py-1.5 md:py-2 rounded-full tracking-widest uppercase border border-[#e76f51]/10 shadow-xs">
+            Kelola Bisnis tanpa Ribet
+          </span>
+          <h1 className="font-title text-3xl md:text-6xl font-black tracking-tight max-w-4xl leading-tight text-white drop-shadow-xs">
+            Aplikasi Kasir Laundry <br />
+            Modern & Praktis
+          </h1>
+          <p className="text-white/90 text-xs md:text-base max-w-xl md:max-w-2xl leading-relaxed font-medium drop-shadow-xs px-4">
+            Kelola transaksi, pantau status cucian, dan lihat laporan bisnis <br className="hidden md:block" />
+            laundry kamu dalam satu aplikasi yang mudah digunakan.
+          </p>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap gap-3 md:gap-4 mt-1 md:mt-2 justify-center">
+            <Link href="/layanan" className="bg-[#e76f51] text-white font-bold text-xs md:text-sm px-6 md:px-8 py-3 md:py-3.5 rounded-full shadow-lg shadow-[#e76f51]/30 hover:bg-[#d95d3f] transition-all">
+              Coba Gratis Sekarang
+            </Link>
+            <button className="bg-white border border-zinc-200/50 text-zinc-700 font-bold text-xs md:text-sm px-6 md:px-8 py-3 md:py-3.5 rounded-full hover:bg-zinc-50 transition-all cursor-pointer shadow-xs">
+              Lihat Demo
+            </button>
           </div>
-          <div className="w-1/4 aspect-[9/18] bg-white rounded-t-[2rem] border-t border-x border-zinc-200 shadow-xl opacity-70 translate-y-12 hidden md:block" />
         </div>
+
+        {/* Kunci Aspek Rasio Pembatas: Memaksa tinggi container section pas mengikuti visual HP di bawahnya */}
+        <div className="w-full max-w-6xl aspect-[16/11] md:aspect-[16/10.8] pointer-events-none" />
       </section>
 
       {/* =========================================================================
@@ -82,7 +87,7 @@ export default function LandingPage() {
                 Semua yang Kamu Butuhkan untuk Mengelola Laundry
               </h3>
               <p className="text-xs md:text-sm text-zinc-500 leading-relaxed font-medium">
-                Kelola transaksi, pantau status cucian, dan lihat laporan bisnis laundry kamu dalam satu aplikasi yang mudah digunakan.
+                Kelola transaksi, pantau status cucian, and lihat laporan bisnis laundry kamu dalam satu aplikasi yang mudah digunakan.
               </p>
               
               {/* Dua Poin Sub-Fitur Kecil di Bawahnya */}
@@ -192,12 +197,11 @@ export default function LandingPage() {
           <p className="text-xs text-zinc-400 max-w-md mx-auto font-medium">Didesain khusus untuk mempermudah segala jenis pembukuan keuangan dan manajemen stok gerai Anda.</p>
         </div>
 
-        {/* Grid 3 Kolom - Menggunakan items-stretch agar tinggi semua kartu otomatis sama besar */}
+        {/* Grid 3 Kolom */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
           
           {/* KARTU 1: UPDATE GRATIS SELAMANYA */}
           <div className="bg-white border border-zinc-100 border-l-[12px] border-l-[#f4a261] rounded-[2rem] p-8 flex flex-col items-start text-left gap-4 shadow-sm hover:shadow-md transition-all duration-300 h-full">
-            {/* Wadah Ikon Abu-abu Bulat Lembut */}
             <div className="w-12 h-12 rounded-xl bg-zinc-50 flex items-center justify-center border border-black/5 text-zinc-700">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rotate-ccw"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
             </div>
@@ -206,7 +210,7 @@ export default function LandingPage() {
                 Update Gratis <br /> Selamanya
               </h4>
               <p className="text-xs text-zinc-500 leading-relaxed font-medium pt-1">
-                Kami terus berinovasi. Nikmati fitur-fitur baru dan pembaruan sistem tanpa dikenakan biaya tambahan sama sekali.
+                Kami terus berinovasi. Nikmati fitur-fitur baru and pembaruan sistem tanpa dikenakan biaya tambahan sama sekali.
               </p>
             </div>
           </div>
@@ -263,15 +267,11 @@ export default function LandingPage() {
         {/* Grid 2 Opsi Kartu Paket */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           
-          {/* KARTU 1: TRIAL (DENGAN EFEK POP GLOW) */}
+          {/* KARTU 1: TRIAL */}
           <div className="bg-white border border-zinc-100 rounded-[2.5rem] p-8 md:p-10 text-left shadow-xs flex flex-col gap-8 justify-between relative overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#e76f51]/15 hover:border-[#e76f51]/30">
-            
-            {/* 💡 POP EFFECT TRIAL: Pendaran oranye lembut di pojok kanan atas, menyala saat di-hover */}
             <div className="absolute -top-16 -right-16 w-64 h-64 bg-[#e76f51]/5 rounded-full blur-[70px] pointer-events-none group-hover:bg-[#e76f51]/25 transition-colors duration-500 z-0" />
-            
             <div className="space-y-6 relative z-10">
               <span className="text-sm font-bold text-zinc-950 group-hover:text-[#e76f51] transition-colors duration-300">Trial</span>
-              
               <div className="space-y-1">
                 <p className="text-sm text-red-400 line-through decoration-red-400/50">Rp. 1.000.000</p>
                 <h3 className="font-title font-black text-4xl text-zinc-950 tracking-tight">
@@ -279,7 +279,6 @@ export default function LandingPage() {
                 </h3>
                 <p className="text-xs text-zinc-400 font-medium">Lorem Ipsum Dolor sir amet</p>
               </div>
-
               <div className="space-y-4">
                 <h4 className="text-xs font-bold text-zinc-900 uppercase tracking-widest">Benefit</h4>
                 <ul className="space-y-3 text-[11px] font-semibold text-zinc-500">
@@ -304,22 +303,16 @@ export default function LandingPage() {
                 </ul>
               </div>
             </div>
-
-            {/* Tombol berubah jadi oranye solid saat di-hover */}
             <button className="w-full py-4 bg-zinc-50/50 text-[#e76f51] font-bold text-xs rounded-3xl hover:bg-[#e76f51] hover:text-white hover:shadow-lg hover:shadow-[#e76f51]/20 transition-all duration-300 cursor-pointer relative z-10">
               Coba Sekarang
             </button>
           </div>
 
-          {/* KARTU 2: DOMPET KOIN (DENGAN EFEK POP GLOW) */}
+          {/* KARTU 2: DOMPET KOIN */}
           <div className="bg-white border border-zinc-100 rounded-[2.5rem] p-8 md:p-10 text-left shadow-xs flex flex-col gap-8 justify-between relative overflow-hidden group transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#e76f51]/15 hover:border-[#e76f51]/30">
-            
-            {/* 💡 POP EFFECT KOIN: Pendaran oranye lembut di pojok kanan bawah, menyala saat di-hover */}
             <div className="absolute -bottom-16 -right-16 w-64 h-64 bg-[#e76f51]/5 rounded-full blur-[70px] pointer-events-none group-hover:bg-[#e76f51]/25 transition-colors duration-500 z-0" />
-            
             <div className="space-y-6 relative z-10">
               <div className="flex items-center gap-4">
-                {/* Koin Emas membal membesar saat di-hover */}
                 <div className="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center border border-amber-100 shrink-0 group-hover:scale-110 group-hover:bg-amber-100 transition-all duration-500 shadow-sm shadow-amber-500/10">
                    <div className="w-10 h-10 bg-amber-400 rounded-full border-4 border-amber-200 flex items-center justify-center text-white font-black group-hover:rotate-12 transition-transform duration-500">@</div>
                 </div>
@@ -328,12 +321,10 @@ export default function LandingPage() {
                   <p className="text-[10px] text-zinc-400 font-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </div>
               </div>
-
               <div className="space-y-1">
                 <p className="text-sm text-zinc-400 line-through decoration-zinc-300">Rp. 500</p>
                 <h3 className="font-title font-black text-4xl text-zinc-950 tracking-tight">Rp 200<span className="text-lg font-bold text-zinc-500">/Transaksi</span></h3>
               </div>
-
               <div className="space-y-4">
                 <h4 className="text-xs font-bold text-zinc-900 uppercase tracking-widest">Benefit</h4>
                 <div className="grid grid-cols-2 gap-x-4 gap-y-3">
@@ -348,8 +339,6 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
-
-            {/* Tombol ikut pop menyala solid oranye pas di-hover */}
             <button className="w-full py-4 bg-zinc-50/50 text-[#e76f51] font-bold text-xs rounded-3xl hover:bg-[#e76f51] hover:text-white hover:shadow-lg hover:shadow-[#e76f51]/20 transition-all duration-300 cursor-pointer relative z-10">
               Top Up Sekarang
             </button>
