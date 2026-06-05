@@ -22,10 +22,10 @@ export default function LandingPage() {
 
         {/* Konten Teks & Tombol (Duduk Manis Pas di Atas Gradasi Gambar Sesuai Tangkapan Layar) */}
         <div className="max-w-7xl mx-auto px-6 md:px-8 text-center flex flex-col items-center gap-4 md:gap-6 z-10">
-          <span className="text-[#e76f51] text-[10px] md:text-xs font-bold bg-white/90 backdrop-blur-xs px-4 py-1.5 md:py-2 rounded-full tracking-widest uppercase border border-[#e76f51]/10 shadow-xs">
+          <span className="text-zinc-600/80 text-[11px] md:text-sm font-medium bg-white/20 backdrop-blur-md px-6 py-2 rounded-full tracking-wide border border-white/40 shadow-[inset_0_1px_2px_rgba(255,255,255,0.4)]">
             Kelola Bisnis tanpa Ribet
           </span>
-          <h1 className="font-title text-3xl md:text-6xl font-black tracking-tight max-w-4xl leading-tight text-white drop-shadow-xs">
+          <h1 className="font-title text-3xl md:text-6xl font-normal tracking-tight max-w-4xl leading-tight text-black drop-shadow-xs">
             Aplikasi Kasir Laundry <br />
             Modern & Praktis
           </h1>
@@ -114,78 +114,56 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Mockup HP Sisi Kanan (Menyembul Tegak Lurus Kebawah) */}
-            <div className="w-full md:w-72 aspect-[9/18] bg-[#d9d9d9] rounded-[2rem] border border-black/5 shadow-2xl shrink-0 translate-y-16 md:absolute md:right-12 md:top-4 z-0 flex items-center justify-center text-xs font-bold text-zinc-400">
-              [ Mockup Layanan Utama ]
+            {/* Mockup HP Sisi Kanan (Posisi Digeser Masuk Lebih ke Kiri Agar Pas) */}
+            <div className="w-full md:w-[320px] h-[520px] shrink-0 translate-y-12 md:absolute md:right-8 md:top-4 z-0 pointer-events-none">
+              <img 
+                src="/gallery/HP1.webp" 
+                className="w-full h-full object-contain object-top" 
+              />
             </div>
           </div>
 
-          {/* ==================== BENTO BAWAH KIRI ==================== */}
-          <div className="lg:col-span-6 bg-[#ffb3a1]/40 rounded-[2.5rem] p-8 md:p-10 border border-[#e76f51]/5 flex flex-col justify-between gap-8 text-left overflow-hidden min-h-[480px]">
+          {/* ==================== BENTO BAWAH KIRI (MENGGUNAKAN HP2.WEBP - PERSISI SCREENSHOT_20260605143051.PNG) ==================== */}
+          <div className="lg:col-span-6 bg-[#ffb3a1]/40 rounded-[2.5rem] p-8 md:p-12 border border-[#e76f51]/5 flex flex-col justify-between text-left overflow-hidden min-h-[520px]">
             <div className="space-y-3">
-              <h3 className="font-title text-xl font-black text-zinc-950 tracking-tight">Semua yang Kamu Butuhkan</h3>
-              <p className="text-xs text-zinc-500 leading-relaxed font-medium">
-                Kelola transaksi, pantau status cucian, dan lihat laporan bisnis laundry kamu dalam satu aplikasi yang mudah digunakan.
-              </p>
-            </div>
-            {/* Mockup HP Menyembul dari Bawah */}
-            <div className="w-56 aspect-[9/16] bg-[#d9d9d9] rounded-t-[1.5rem] border-t border-x border-black/5 shadow-xl mx-auto translate-y-12 shrink-0 flex items-center justify-center text-xs font-bold text-zinc-400">
-              [ Mockup Status Cucian ]
-            </div>
-          </div>
-
-          {/* ==================== BENTO BAWAH KANAN ==================== */}
-          <div className="lg:col-span-6 bg-[#ffb3a1]/40 rounded-[2.5rem] p-8 md:p-10 border border-[#e76f51]/5 flex flex-col justify-between gap-8 text-left overflow-hidden min-h-[480px]">
-            <div className="space-y-3">
-              <h3 className="font-title text-xl font-black text-zinc-950 tracking-tight">Semua yang Kamu Butuhkan</h3>
-              <p className="text-xs text-zinc-500 leading-relaxed font-medium">
-                Kelola transaksi, pantau status cucian, dan lihat laporan bisnis laundry kamu dalam satu aplikasi yang mudah digunakan.
-              </p>
-            </div>
-            {/* Mockup HP Menyembul dari Bawah */}
-            <div className="w-56 aspect-[9/16] bg-[#d9d9d9] rounded-t-[1.5rem] border-t border-x border-black/5 shadow-xl mx-auto translate-y-12 shrink-0 flex items-center justify-center text-xs font-bold text-zinc-400">
-              [ Mockup Ringkasan Dasbor ]
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* =========================================================================
-          3. GRID 4 CARD HALAMAN LAYANAN (PRESISI FRAME 3095)
-          ========================================================================= */}
-      <section className="py-16 max-w-7xl mx-auto px-6 md:px-8">
-        <div className="w-full bg-[#fdf0eb] rounded-[2.5rem] p-8 md:p-14 border border-[#e76f51]/5 space-y-12">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-left">
-            <div className="space-y-3">
-              <h3 className="font-title text-2xl md:text-3xl font-black text-zinc-950 tracking-tight">
-                Semua yang Kamu Butuhkan
+              <h3 className="font-title text-xl md:text-2xl font-normal text-zinc-950 tracking-tight">
+                Kelola Status Cucian dengan Cepat
               </h3>
-              <p className="text-xs md:text-sm text-zinc-500 font-medium max-w-xl leading-relaxed">
-                Ayocuci dirancang khusus untuk membantu operasional laundry jadi lebih cepat, rapi, dan mudah digunakan.
+              <p className="text-xs md:text-sm text-zinc-500 leading-relaxed font-medium max-w-md">
+                Pantau setiap pesanan dari proses masuk hingga selesai agar operasional lebih teratur dan minim kesalahan.
               </p>
             </div>
-            <Link href="/layanan" className="text-xs font-bold text-zinc-900 hover:text-[#e76f51] flex items-center gap-1.5 transition-all shrink-0 pb-1">
-              Lihat Selengkapnya <span className="text-sm font-light">→</span>
-            </Link>
+            {/* Mockup HP2 Menyembul Besar & Terpotong Rapi di Sisi Bawah Sesuai Gambar */}
+            <div className="w-full max-w-[280px] md:max-w-[340px] mx-auto shrink-0 pointer-events-none translate-y-20 md:translate-y-28 -mb-0">
+              <img 
+                src="/gallery/HP2.webp" 
+                className="w-full h-auto object-contain object-top" 
+              />
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="bg-white rounded-[2rem] p-5 flex flex-col gap-5 shadow-xs border border-zinc-100/50">
-                <div className="w-full aspect-[16/10] bg-[#d9d9d9] rounded-[1.5rem] border border-black/5 shrink-0" />
-                <div className="space-y-2 text-left px-1 flex-1">
-                  <h4 className="text-base font-black text-zinc-950 tracking-tight">Semua yang Kamu Butuhkan</h4>
-                  <p className="text-xs text-zinc-400 font-medium leading-relaxed">Ayocuci dirancang khusus untuk membantu operasional laundry jadi lebih cepat, rapi, dan mudah digunakan.</p>
-                </div>
-                <button className="w-full py-3.5 bg-[#e76f51] text-white rounded-2xl text-xs font-bold hover:opacity-95 transition-all cursor-pointer shadow-lg shadow-[#e76f51]/25 border border-transparent">
-                  Pelajari Selengkapnya
-                </button>
-              </div>
-            ))}
+          {/* ==================== BENTO BAWAH KANAN (MENGGUNAKAN HP3.WEBP - DIBAWAKAN SELARAS) ==================== */}
+          <div className="lg:col-span-6 bg-[#ffb3a1]/40 rounded-[2.5rem] p-8 md:p-12 border border-[#e76f51]/5 flex flex-col justify-between text-left overflow-hidden min-h-[520px]">
+            <div className="space-y-3">
+              <h3 className="font-title text-xl md:text-2xl font-normal text-zinc-950 tracking-tight">
+                Pantau Ringkasan Dasbor Bisnis
+              </h3>
+              <p className="text-xs md:text-sm text-zinc-500 leading-relaxed font-medium max-w-md">
+                Kelola transaksi, pantau status cucian, dan lihat laporan bisnis laundry kamu dalam satu aplikasi yang mudah digunakan.
+              </p>
+            </div>
+            {/* Mockup HP3 Menyembul Besar & Terpotong Rapi di Sisi Bawah Sesuai Gambar */}
+            <div className="w-full max-w-70 md:max-w-85 mx-auto shrink-0 pointer-events-none translate-y-20 md:translate-y-28 -mb-0">
+              <img 
+                src="/gallery/HP3.webp" 
+                className="w-full h-auto object-contain object-top" 
+              />
+            </div>
           </div>
+
         </div>
       </section>
+
 
       {/* =========================================================================
           4. VALUE PROPOSITION (SOLUSI TERBAIK - PRESISI 100% SESUAI FRAME 3205)

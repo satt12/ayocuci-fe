@@ -8,15 +8,15 @@ export default function ArtikelPage() {
 
   // Menyesuaikan src dengan letak file kamu di public/gallery/ berdasarkan image_8f0c56.png
   const daftarArtikel = [
-    { id: 1, image: "/gallery/Logo_2.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
-    { id: 2, image: "/gallery/Logo_1.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
-    { id: 3, image: "/gallery/Logo_2.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
-    { id: 4, image: "/gallery/Logo_1.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
-    { id: 5, image: "/gallery/Logo_2.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
-    { id: 6, image: "/gallery/Logo_1.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
-    { id: 7, image: "/gallery/Logo_2.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
-    { id: 8, image: "/gallery/Logo_1.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
-    { id: 9, image: "/gallery/Logo_2.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 1, image: "/gallery/Foto3.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 2, image: "/gallery/Foto1.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 3, image: "/gallery/Foto2.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 4, image: "/gallery/Foto3.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 5, image: "/gallery/Foto2.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 6, image: "/gallery/Foto1.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 7, image: "/gallery/Foto2.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 8, image: "/gallery/Foto3.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
+    { id: 9, image: "/gallery/Foto1.webp", tag: "Promo", title: "Lorem ipsum dolor sir amet lorem", date: "29 Mei 2026" },
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function ArtikelPage() {
             <div className="w-full aspect-[16/10] bg-zinc-50 rounded-3xl overflow-hidden border border-zinc-100/50 relative">
               {/* Gambar Utama Mengarah Langsung ke File Kamu */}
               <img 
-                src="/gallery/Logo_2.webp" 
+                src="/gallery/Foto1.webp" 
                 alt="Featured Post"
                 className="w-full h-full object-cover"
               />
