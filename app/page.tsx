@@ -324,6 +324,106 @@ export default function LandingPage() {
 
         </div>
       </section>
+      
+      {/* =========================================================================
+          6. ARTIKEL & PROMO SECTION (BACKGROUND KREM/KUNING SOFT & LIQUID GLASS)
+          ========================================================================= */}
+      <section className="py-20 bg-[#ffb3a1]/20 w-full overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 space-y-12">
+          
+          {/* Header Seksi - Rata Kiri dengan Background Krem Soft */}
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 text-left border-b border-zinc-200 pb-8">
+            <div className="space-y-4 flex flex-col items-start">
+              
+              {/* Liquid Glass Badge (Efek Kaca di atas Background Soft) */}
+              <span className="text-[#e76f51] text-[11px] md:text-xs font-medium bg-white/40 backdrop-blur-md px-5 py-2 rounded-full tracking-wide border border-white/60 shadow-[inset_0_1px_2px_rgba(255,255,255,0.5)]">
+                Artikel & Promo
+              </span>
+
+              <div className="space-y-2">
+                <h2 className="font-title text-3xl md:text-4xl font-normal tracking-tight text-zinc-950">
+                  Informasi Terbaru
+                </h2>
+                <p className="text-xs md:text-sm text-zinc-500 font-medium max-w-xl leading-relaxed">
+                  Tips, promo menarik, dan update fitur untuk bisnis laundry kamu
+                </p>
+              </div>
+            </div>
+
+            <div className="shrink-0 pb-1">
+              <Link href="/artikel" className="text-xs md:text-sm font-bold text-zinc-800 bg-white/60 hover:bg-white px-6 py-2.5 rounded-full border border-zinc-200 flex items-center gap-1.5 transition-all shadow-2xs">
+                Lihat Selengkapnya <span className="text-sm font-light">→</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* Grid 3 Kolom Card Artikel */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { img: "/gallery/Foto1.webp", title: "Lorem ipsum dolor sir amet lorem" },
+              { img: "/gallery/Foto2.webp", title: "Lorem ipsum dolor sir amet lorem" },
+              { img: "/gallery/Foto3.webp", title: "Lorem ipsum dolor sir amet lorem" },
+            ].map((item, index) => (
+              <div key={index} className="bg-white rounded-[2.5rem] p-5 flex flex-col gap-5 shadow-xs border border-zinc-100/80 hover:-translate-y-2 hover:shadow-md transition-all duration-500">
+                
+                {/* Wadah Image Banner Promo */}
+                <div className="w-full aspect-[16/10] bg-zinc-50 rounded-[1.8rem] overflow-hidden">
+                  <img 
+                    src={item.img} 
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                  />
+                </div>
+
+                {/* Konten Teks & Deskripsi */}
+                <div className="flex flex-col flex-1 px-1 justify-between gap-4 text-left">
+                  <div className="space-y-2">
+                    <h4 className="text-base font-bold text-zinc-950 tracking-tight leading-snug line-clamp-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs text-zinc-400 leading-relaxed font-medium line-clamp-3">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                    </p>
+                  </div>
+
+                  {/* Footer Card */}
+                  <div className="flex items-center justify-between border-t border-zinc-100 pt-4 text-[11px] md:text-xs font-semibold">
+                    <span className="text-zinc-400 font-medium">29 Mei 2025</span>
+                    <Link href="/artikel" className="text-[#e76f51] hover:text-[#d95d3f] flex items-center gap-1 transition-all">
+                      Baca <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+          {/* =========================================================================
+          7. PARTNER LOGO SECTION (PRESISI 100% SESUAI IMAGE_14003e.PNG)
+          ========================================================================= */}
+      <section className="py-16 w-full max-w-7xl mx-auto px-6 md:px-8 text-center space-y-10">
+        
+        {/* Teks Deskripsi Tengah */}
+        <p className="text-zinc-500 text-xs md:text-sm max-w-xl md:max-w-2xl mx-auto leading-relaxed font-medium">
+          Ayocuci dirancang khusus untuk membantu operasional laundry jadi <br className="hidden sm:block" />
+          lebih cepat, rapi, dan mudah digunakan.
+        </p>
+
+        {/* Barisan Placeholder Logo Kemitraan */}
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 md:gap-6 items-center justify-center max-w-5xl mx-auto">
+          {[1, 2, 3, 4, 5, 6].map((logo) => (
+            <div 
+              key={logo} 
+              className="w-full h-12 md:h-14 bg-zinc-400/20 rounded-md backdrop-blur-xs transition-opacity duration-300 hover:opacity-80"
+              title={`Logo Partner ${logo}`}
+            />
+          ))}
+        </div>
+
+      </section>
+
     </main>
   );
 }
